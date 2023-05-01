@@ -1,0 +1,15 @@
+---
+title: "avocado"
+author: "Andrew Chen"
+date: "2023-05-01"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+avo = read.csv("avocado.csv", header = TRUE)
+```
+

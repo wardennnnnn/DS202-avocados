@@ -5,11 +5,16 @@ date: "2023-05-01"
 output: html_document
 ---
 
+Team Members: Andrew Chen, Vrinda Vegiraju, Kennedy Wendl
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
 ```
 
 ```{r}
 avo = read.csv("avocado.csv", header = TRUE)
 ```
+
+We will be using the avocados data set from https://www.kaggle.com/datasets/neuromusic/avocado-prices. The data was collected by the Hass Avocado Board website. There are 14 variables in this data set. X is the index. Date is the date of when the data was observed. AveragePrice is the average price of one avocado. Total_Volume is the total number of avocados sold. 4046,4225,4770 are the PLU codes, which is the weight of the avocado. 4046 is 3-5 oz, 4225 is 8-10 oz, 4770 is 10-15 oz. Total_Bags is the total number of bags sold. Small_Bags is the number of small bags sold. Large_Bags is the number of large bags sold. XLarge_Bags is the number of extra large bags sold. Type is the type of avocado (conventional or organic). Year is the year that the data was observed. Region is the location of where the data was observed.
 

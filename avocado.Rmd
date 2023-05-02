@@ -33,3 +33,45 @@ Year is the year that the data was observed.
 Region is the location of where the data was observed.
 
 The data is already cleaned from what we can see.
+
+
+Scatter
+```{r}
+avo_scatter = avo
+```
+
+Line
+```{r}
+avo_line = avo
+```
+
+Time Series
+```{r}
+avo_time = avo
+```
+
+Box
+```{r}
+avo_box = avo
+```
+
+Bar
+```{r}
+avo_bar = avo
+```
+
+Histogram
+```{r}
+avo_hist = avo
+```
+
+Mosaic
+```{r}
+avo_mos = avo
+```
+
+Map
+```{r}
+avo_map = avo
+```
+

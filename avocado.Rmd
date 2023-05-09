@@ -97,9 +97,18 @@ avo_bar = avo
 
 Histogram
 ```{r}
-#Andrew
 avo_hist = avo
+avo_hist2 <- subset(avo_hist, !(region %in% c("Midsouth", "Northeast", "SouthCentral",
+                                              "Southeast", "West", "TotalUS" )))
+
+ggplot(data = avo_hist2, aes(x = Total_Volume)) +
+  geom_histogram(bins = 50) +
+  scale_x_continuous(limits = c(0, 6500000), labels = scales::comma_format()) +
+  coord_cartesian(ylim = c(0, 2500)) +
+  facet_wrap(~type)
+
 ```
+
 
 Mosaic
 ```{r}

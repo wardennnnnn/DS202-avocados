@@ -37,11 +37,13 @@ The data is already cleaned from what we can see.
 
 Scatter
 ```{r}
+#Kennedy
 avo_scatter = avo
 ```
 
 Line
 ```{r}
+#Vrinda
 avo_line = avo
 ```
 
@@ -52,11 +54,13 @@ avo_time = avo
 
 Box
 ```{r}
+#Kennedy
 avo_box = avo
 ```
 
 Bar
 ```{r}
+#Vrinda
 avo_bar = avo
 ```
 

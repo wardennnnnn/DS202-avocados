@@ -66,7 +66,14 @@ Line
 ```{r}
 #Vrinda
 avo_line = avo
+
+linePlot = ggplot(avo_line, aes(x = AveragePrice, y = Date)) + geom_line() +
+  facet_wrap(~year)
+
+print(linePlot + labs(x = "The type of Avocados",
+                     y = "The Date Sold"))
 ```
+For this line graph, I looked at the comparisin between the type of avocado and the corresponding date it was sold. 2018 had the least amount of corresponding avocados sold. Unlike the other years, 2018 also had no sale of type 3 avocados. 
 
 Time Series
 ```{r}

@@ -40,7 +40,26 @@ Scatter
 ```{r}
 #Kennedy
 avo_scatter = avo
+avo_scatter <- avo_scatter %>% filter(region == "Albany" & year == "2015")
+
+#Plotting the data 
+scatterPlot = ggplot(avo_scatter, aes(x = AveragePrice, 
+                                      y = Total_Bags, 
+                                      color = variable)) + 
+  geom_point(aes(y = Small_Bags, color = "green")) +
+  geom_point(aes(y = Large_Bags, color = "blue")) + 
+  geom_point(aes(y = XLarge_Bags, color = "red")) +
+  scale_color_manual(labels = c("Small", "Large", "XLarge"),
+                     values = c("green", "blue", "red"))
+
+print(scatterPlot + labs(x = "Average Price of One Avocado", 
+                         y = "Total Number of Bags Sold",
+                         color = "Bag Type"))
 ```
+
+For the scatter plot, I decided to focus on the number of bags sold in Albany during 2015. I wanted to determine if one type was sold more frequently depending on the average price of an avocado.
+
+Based on the findings above, the closer the average cost of an avocado is to 1.50 the greater the sales are for Large bags. The plot displays as the price increases from 0.90 to 1.50 the sales gradually increase. That being said, once the price raises from 1.50 the sales between large and xlarge bags remain relatively the same, with large bags selling slightly more. 
 
 Line
 ```{r}
@@ -50,6 +69,7 @@ avo_line = avo
 
 Time Series
 ```{r}
+#Andrew
 #Time Series
 avo_time = avo
 avo_time2 <- avo_time %>%
@@ -97,6 +117,7 @@ avo_bar = avo
 
 Histogram
 ```{r}
+#Andrew
 avo_hist = avo
 avo_hist2 <- subset(avo_hist, !(region %in% c("Midsouth", "Northeast", "SouthCentral",
                                               "Southeast", "West", "TotalUS" )))

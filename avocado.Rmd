@@ -132,9 +132,14 @@ That being said, the data for 2018 is incomplete and the prices could be greater
 Bar
 ```{r}
 #Vrinda
-avo_bar = avo
 
+avo_bar = avo
+barPlot = ggplot(avo_bar, aes(x = type)) + geom_bar() +
+  facet_wrap(~type)
+
+print(barPlot + labs(x = "Type of Avocado"))
 ```
+As shown in the bar plot, we can clearly see the difference between the two types of avacados: The conventional versus organic avacados The count ranges from 0 to 7500 and based on the bar plot, we can see the similarity between the two types of avacados, both being very high, above 7500.
 
 Histogram
 ```{r}
